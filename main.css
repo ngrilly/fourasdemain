@@ -1,0 +1,176 @@
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+input,
+button {
+	font-family: inherit;
+	font-size: inherit;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	box-sizing: border-box;
+	font-family: Raleway, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	margin: 0;
+	line-height: 1.5;
+	color: #444;
+	height: 100%;
+}
+
+h1, h2, h3 {
+	line-height: 1.2;
+}
+
+h1 {
+	font-size: 2.5em;
+}
+
+a {
+	text-decoration: none;
+}
+
+input,
+button {
+	border-radius: 2px;
+}
+
+button {
+	color: white;
+	background: #6754A3;
+	padding: 0.5em;
+	border: none;
+	cursor: pointer;
+}
+
+input {
+	border: 1px solid #ccc;
+	padding: 0.5em;
+}
+
+.action {
+	color: #6754A3;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.container {
+	margin: 0 auto;
+	max-width: 55em;
+	padding-left: 2em;
+	padding-right: 2em;
+}
+
+.box {
+	border-radius: 2px;
+	padding: 1em;
+	background: rgba(103, 84, 163, 0.1);
+}
+
+.banner {
+	background: rgba(103, 84, 163, 0.1);
+	padding: 1em;
+}
+
+.section {
+	padding-top: 4em;
+	padding-bottom: 4em;
+}
+
+.hero-background {
+	background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(image/banner.jpg) no-repeat center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	overflow: hidden;
+	color: white;
+}
+
+.navigation {
+	padding: 50px 50px;
+	text-align: center;
+}
+
+.navigation nav {
+	float: right;
+	line-height: 100px;
+}
+
+.navigation nav a {
+	float: left;
+	color: white;
+	font-weight: 600;
+	text-transform: uppercase;
+	font-size: 0.875em;
+	letter-spacing: 0.05em;
+}
+
+/*
+#hero:before {
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+	background: black;
+    opacity: 0.3;
+    content: ' ';
+    top: 0;
+    left: 0;
+    -webkit-transition: all 225ms ease;
+    -moz-transition: all 225ms ease;
+    transition: all 225ms ease;
+}
+*/
+
+#logo {
+	width: 150px;
+}
+
+.hero-text {
+	padding: 50px 50px;
+	text-align: center;
+}
+
+#subscribe {
+	display: inline-block;
+}
+
+.contact {
+	text-align: center;
+	width: 100%;
+	display: table;
+}
+
+.contact a {
+	display: block;
+	color: #666;
+	padding: 1em;
+}
+
+.contact a em,
+.contact a strong {
+	display: block;
+}
+
+.contact a em {
+	font-style: normal;
+	text-transform: uppercase;
+	font-size: 0.875em;
+	letter-spacing: 0.1em;
+}
+
+.contact a:hover strong {
+	text-decoration: underline;
+}
+
+@media (min-width: 500px) {
+	.contact a {
+		display: table-cell;
+		width: 50%;
+	}
+}
