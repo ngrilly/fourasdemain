@@ -35,7 +35,7 @@
 	Fouras Demain est un mouvement citoyen, qui rassemble des Fourasins de toutes tendances, autour d'une volonté de bâtir un projet positif et visionnaire pour notre presqu'île, et le mettre en oeuvre dès 2020.
 </div>
 <div class="contact container">
-	<a href="mailto:contact@fourasdemain.fr">
+	<a href="mailto:contact@fourasdemain.fr" target="_blank">
 		<em>Écrivez-nous :</em>
 		<strong>contact@fourasdemain.fr</strong>
 	</a>
@@ -68,6 +68,12 @@ $('#subscribe').submit(function (event) {
             form.children('button').text(oldText).removeAttr('disabled');
         }
     });
-    ga('send', 'event', 'button', 'click', 'signup');
+    ga('send', 'event', 'form', 'submit', 'signup');
 });
+
+$('a').click(handleOutboundLinkClicks);
+
+function handleOutboundLinkClicks(event) {
+	ga('send', 'event', 'outbound', 'click', event.currentTarget.href);
+}
 </script>
