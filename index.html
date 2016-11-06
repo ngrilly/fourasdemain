@@ -51,10 +51,14 @@ $('#subscribe').submit(function (event) {
     var form = jQuery(this);
     var oldText = form.children('button').text();
     form.children('button').text('Envoi en cours...').attr('disabled', 'disabled');
+
+    var data = form.serializeArray();
+    data.push({name: 'referrer', value: document.referrer});
+
     jQuery.ajax({
         url: 'https://formspree.io/ngrilly@gmail.com',
         method: 'POST',
-        data: form.serialize(),
+        data: data,
         dataType: 'json',
         timeout: 10000,
         success: function() {
