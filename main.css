@@ -78,14 +78,16 @@ input {
 }
 
 .hero-background {
-	background: #9bcefd;
-	background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(image/banner.jpg) #9bcefd no-repeat center center;
+	color: white;
+	background-color: #9bcefd;
+	background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(image/banner.jpg);
+	background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(image/banner.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-	overflow: hidden;
-	color: white;
 }
 
 .navigation {
@@ -106,23 +108,6 @@ input {
 	font-size: 0.875em;
 	letter-spacing: 0.05em;
 }
-
-/*
-#hero:before {
-    display: block;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-	background: black;
-    opacity: 0.3;
-    content: ' ';
-    top: 0;
-    left: 0;
-    -webkit-transition: all 225ms ease;
-    -moz-transition: all 225ms ease;
-    transition: all 225ms ease;
-}
-*/
 
 #logo {
 	width: 150px;
