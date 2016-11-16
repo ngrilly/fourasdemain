@@ -1,0 +1,8 @@
+<table>
+	{{range $key, $value := .}}
+		<tr>
+			<td><b>{{html $key}}</b>
+			<td>{{index $value | html}}
+		</tr>
+	{{end}}
+</table>

@@ -1,0 +1,3 @@
+[submodule "github.com/pkg/errors"]
+	path = github.com/pkg/errors
+	url = git@github.com:pkg/errors

@@ -18,7 +18,7 @@
 		<img src="image/logo.png" id="logo" alt="Logo Fouras Demain">
 	</div>
 	<div class="hero-text">
-		<h1>Nous voulons remettre Fouras en mouvement.<br>Quel Fouras voulez-vous demain ?</h1>
+		<h1>En 2020, remettons Fouras en mouvement.<br>Quel Fouras voulez-vous demain ?</h1>
 	</div>
 </div>
 <div class="banner">
@@ -56,7 +56,7 @@ $('#subscribe').submit(function (event) {
     data.push({name: 'referrer', value: document.referrer});
 
     jQuery.ajax({
-        url: 'https://formspree.io/ngrilly@gmail.com',
+        url: '/api/subscribe',
         method: 'POST',
         data: data,
         dataType: 'json',
