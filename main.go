@@ -46,7 +46,6 @@ func subscribe(ctx appengine.Context, r *http.Request) interface{} {
 		return err
 	}
 
-	// TODO: remove the logo
 	// TODO: set Reply-To to s.Email
 	err := SendEmail(
 		ctx,
@@ -54,6 +53,7 @@ func subscribe(ctx appengine.Context, r *http.Request) interface{} {
 		[]string{ourEmail},
 		"Fouras Demain - Nouvelle inscription",
 		MustRenderTemplate(assetDir+"/notify_form_submit.html", structToMap(s)),
+		"",
 		"notification",
 	)
 	if err != nil {
@@ -66,6 +66,7 @@ func subscribe(ctx appengine.Context, r *http.Request) interface{} {
 		[]string{s.Email},
 		"Merci pour votre inscription sur www.fourasdemain.fr",
 		MustRenderTemplate(assetDir+"/welcome.html", nil),
+		assetDir+"/logo200x200.png",
 		"confirmation",
 	)
 	if err != nil {

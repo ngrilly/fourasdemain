@@ -18,7 +18,7 @@ const mailgunEndpoint = "https://api.mailgun.net/v3/fourasdemain.fr/messages"
 var mailgunAPIKey = os.Getenv("MAILGUN_API_KEY")
 
 // SendEmail sends an email.
-func SendEmail(ctx appengine.Context, from string, to []string, subject string, msg []byte, tag string) error {
+func SendEmail(ctx appengine.Context, from string, to []string, subject string, msg []byte, inline string, tag string) error {
 	reqBody := &bytes.Buffer{}
 
 	w := multipart.NewWriter(reqBody)
@@ -28,7 +28,9 @@ func SendEmail(ctx appengine.Context, from string, to []string, subject string, 
 	addString(w, "o:tracking", "yes")
 	addString(w, "o:tag", tag)
 	addBytes(w, "html", msg)
-	addFile(w, "inline", "logo200x200.png")
+	if inline != "" {
+		addFile(w, "inline", inline)
+	}
 	w.Close()
 
 	req, err := http.NewRequest("POST", mailgunEndpoint, reqBody)
