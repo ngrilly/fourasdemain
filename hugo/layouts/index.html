@@ -1,27 +1,5 @@
-<!DOCTYPE html>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Fouras Demain - Une dynamique pour la presqu'île en 2020</title>
-<link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
-<link href="main.css" rel="stylesheet">
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-71248376-2', 'auto');
-  ga('send', 'pageview');
-</script>
-<div class="hero-background">
-	<div class="navigation">
-		<img src="image/logo.png" id="logo" alt="Logo Fouras Demain">
-	</div>
-	<div class="hero-text">
-		<h1>En 2020, remettons Fouras en mouvement.<br>Quel Fouras voulez-vous demain ?</h1>
-	</div>
-</div>
-<div class="banner">
+{{partial "header.html" .}}
+<div class="banner purple">
 	<div class="container">
 		Inscrivez-vous pour rester informé et participer :
 		<form id="subscribe">
@@ -31,20 +9,19 @@
 	</div>
 </div>
 <div class="section container">
+  <h2>Qui sommes-nous ?</h2>
 	<p>
 	Fouras Demain est un mouvement citoyen, qui rassemble des Fourasins de toutes tendances, autour d'une volonté de bâtir un projet positif et visionnaire pour notre presqu'île, et le mettre en oeuvre dès 2020.
 </div>
-<div class="contact container">
-	<a href="mailto:contact@fourasdemain.fr" target="_blank">
-		<em>Écrivez-nous :</em>
-		<strong>contact@fourasdemain.fr</strong>
-	</a>
-	<a href="https://www.facebook.com/FourasDemain" target="_blank">
-		<em>Suivez-nous sur :</em>
-		<strong>Facebook</strong>
-	</a>
+<div class="section top-border">
+  <div class="container">
+    <h2>Actualité</h2>
+      {{ range .Data.Pages }}
+        <a href="{{.Permalink}}" class="post-title">{{ .Title}}</a> • {{ .Date.Format "02/01/2006" }}
+      {{ end }}
+  </div>
 </div>
-<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+{{partial "footer.html" .}}
 <script>
 $('#subscribe').submit(function (event) {
 	event.preventDefault();

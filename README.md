@@ -2,6 +2,10 @@ Install the Google App Engine SDK for Go:
 
 https://cloud.google.com/appengine/docs/go/download
 
+Install Hugo:
+
+	$ brew install hugo
+
 Create and complete a file named `env` in the project root directory:
 
     MAILGUN_API_KEY=

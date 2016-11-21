@@ -1,0 +1,9 @@
+{{partial "header.html" .}}
+<div class="section">
+	<div class="container">
+		<h1>{{.Title}}</h1>
+		<div class="date">Le {{ .Date.Format "Mon 2 Jan 2006" }}</div>
+		{{.Content}}
+	</div>
+</div>
+{{partial "footer.html" .}}

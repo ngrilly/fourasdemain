@@ -1,0 +1,9 @@
+title = "Fouras Demain"
+languageCode = "fr-fr"
+baseurl = "/"
+publishdir = "../public"
+
+[blackfriday]
+angledQuotes = true
+hrefTargetBlank = true
+extensions = ["hardLineBreak"]

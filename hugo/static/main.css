@@ -1,3 +1,7 @@
+img {
+  border-style: none;
+}
+
 *, *:before, *:after {
 	box-sizing: inherit;
 }
@@ -28,6 +32,10 @@ h1, h2, h3 {
 
 a {
 	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
 }
 
 input,
@@ -61,6 +69,10 @@ input {
 	padding-right: 2em;
 }
 
+.purple {
+	background: rgba(103, 84, 163, 0.1);
+}
+
 .box {
 	border-radius: 2px;
 	padding: 1em;
@@ -68,13 +80,16 @@ input {
 }
 
 .banner {
-	background: rgba(103, 84, 163, 0.1);
 	padding: 1em;
 }
 
 .section {
 	padding-top: 4em;
 	padding-bottom: 4em;
+}
+
+.top-border {
+	border-top: 1px solid #e5e5e5;
 }
 
 .hero-background {
@@ -123,32 +138,34 @@ input {
 	display: inline-block;
 }
 
+.container h2 {
+	text-align: center;
+}
+
+.container h2:first-child {
+	margin-top: 0;
+}
+
+.post-title {
+	font-size: 1.5em;
+}
+
 .contact {
 	text-align: center;
 	width: 100%;
 	display: table;
+	color: #666;
 }
 
 .contact a {
-	display: block;
-	color: #666;
-	padding: 1em;
+	font-weight: bold;
 }
 
-.contact a em,
-.contact a strong {
-	display: block;
-}
-
-.contact a em {
+.contact-title {
 	font-style: normal;
 	text-transform: uppercase;
 	font-size: 0.875em;
 	letter-spacing: 0.1em;
-}
-
-.contact a:hover strong {
-	text-decoration: underline;
 }
 
 @media (min-width: 500px) {
@@ -156,7 +173,7 @@ input {
 		font-size: 2.5em;
 	}
 
-	.contact a {
+	.contact .contact-column {
 		display: table-cell;
 		width: 50%;
 	}
