@@ -6,6 +6,10 @@ Install Hugo:
 
 	$ brew install hugo
 
+Install CSS inliner:
+
+	$ go get github.com/aymerick/douceur
+
 Create and complete a file named `env` in the project root directory:
 
     MAILGUN_API_KEY=
