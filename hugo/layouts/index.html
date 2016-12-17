@@ -17,7 +17,7 @@
   <div class="container">
     <h2>Actualité</h2>
       {{ range .Data.Pages }}
-        <a href="{{.Permalink}}" class="post-title">{{ .Title}}</a> • {{ .Date.Format "02/01/2006" }}
+        <div><a href="{{.Permalink}}" class="post-title">{{ .Title}}</a> • {{ .Date.Format "02/01/2006" }}</div>
       {{ end }}
   </div>
 </div>
